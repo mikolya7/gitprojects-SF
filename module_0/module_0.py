@@ -1,4 +1,4 @@
-import numpy as np
+﻿import numpy as np
 
 
 def game_core_v2(number, from_value=1, max_value=100):
@@ -19,13 +19,13 @@ def game_core_v2(number, from_value=1, max_value=100):
 
         # если не угадали, то сужаем диапазон поиска
         if number > predict:
-            min_value = predict
+            min_value = predict + 1
         elif number < predict:
-            max_value = predict
+            max_value = predict - 1
         else:
             found = True  # угадали число number, завершаем цилк
 
-    return(predictions_count)
+    return predictions_count
 
 
 def score_game(game_core):
