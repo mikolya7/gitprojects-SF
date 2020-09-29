@@ -1,2 +1,6 @@
 # gitprojects
- gitprojects
+Проекты, выпоненные в рамках прохождения курса Data Science в Skill Factory
+
+## Проект 0. GitHub. 
+В каталоге module_0 расположен проект, выполенный в рамках Юнита 0. Проект 0. GitHub. Самый быстрый старт RDS.
+
