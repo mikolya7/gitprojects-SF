@@ -1,20 +1,20 @@
-﻿import numpy as np
+import numpy as np
 
 
-def game_core_v2(number, from_value=1, max_value=100):
-    ''' Угадываем число number в диапазоне (from_value, max_value) включительно
-    возвращаем количество попыток, за которые угадали число. '''
-
+def game_core_v2(number, from_value=1, to_value=100):
+    """ Угадываем число number в диапазоне (from_value, max_value) включительно,
+        используем бинарный поиск
+        возвращаем количество попыток, за которые угадали число.
+    """
     found = False
     predictions_count = 0
     min_value = from_value
-    max_value = max_value
-
+    max_value = to_value
     # в цикле угадываем число, каждый раз после удагывания сужаем диапазон
     # до тех пор, пока не угадали
     while not found:
-        # пытаемся угадать number в диапазоне (min_value, max_value)
-        predict = np.random.randint(min_value, max_value + 1)
+        # пытаемся угадать number бинарным поиском
+        predict = (min_value + max_value) // 2
         predictions_count += 1
 
         # если не угадали, то сужаем диапазон поиска
@@ -23,7 +23,7 @@ def game_core_v2(number, from_value=1, max_value=100):
         elif number < predict:
             max_value = predict - 1
         else:
-            found = True  # угадали число number, завершаем цикл
+            found = True  # угадали число number и завершаем цилк
 
     return predictions_count
 
