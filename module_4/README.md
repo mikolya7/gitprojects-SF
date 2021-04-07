@@ -9,3 +9,6 @@
 
 ### Результат.
 Score = 0.73796 на Public Leaderboard, kaggle.com 
+
+### Ссылка на проект на Kaggle.
+https://www.kaggle.com/nikolaymikhelson/rds-bank-scoring-nikolay-mikhelson-dst40
